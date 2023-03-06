@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlRemote.Views.EntryPage"
+             xmlns:viewmodels="clr-namespace:ControlRemote.VIewModels"
+             xmlns:views="clr-namespace:ControlRemote.Views"
+             Title="EntryPage"
+             BackgroundColor="Black">
+    
+    
+    
+    <ContentPage.BindingContext>
+        <viewmodels:EntryViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout HorizontalOptions="Center">
+
+        <Label Margin="10,30" Text="Input IP derived on your PC: " FontSize="Large" TextColor="White"/>
+
+        <Entry WidthRequest="350" Margin="10,20" BackgroundColor="White" TextColor="Black" Placeholder="IP ..." Text="{Binding IP}"/>
+
+        <Button Margin="10, 20" WidthRequest="320"  BackgroundColor="White" TextColor="Black" Command="{Binding OnInputQuery}" Text="Log in"/>
+    </StackLayout>
+
+</ContentPage>
+
+

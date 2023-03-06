@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlRemote.Views.MouseView">
+
+
+
+
+
+    <StackLayout>
+
+        <Label Text="Mouse control" HorizontalOptions="Center" FontSize="36"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button Released="OnButtonReleased" Pressed="Button_Clicked"  Margin="10" Text="Up" Grid.Row="0" Grid.Column="1"/>
+            <Button Released="OnButtonReleased" Pressed="Button_Clicked" Margin="10" Text="Down" Grid.Row="2" Grid.Column="1"/>
+            <Button Released="OnButtonReleased" Pressed="Button_Clicked" Margin="10" Text="Left" Grid.Row="1" Grid.Column="0" />
+
+            <Button Released="OnButtonReleased" Pressed="Button_Clicked" Margin="10" Text="Enter" Grid.Row="1" Grid.Column="1" />
+            <Button Released="OnButtonReleased" Pressed="Button_Clicked" Margin="10" Text="Right" Grid.Row="1" Grid.Column="2" />
+
+        </Grid>
+
+
+
+    </StackLayout>
+
+</ContentView>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlRemote.Views.MainPage"
+             xmlns:viewmodels="clr-namespace:ControlRemote.VIewModels"
+             xmlns:views="clr-namespace:ControlRemote.Views"
+             BackgroundColor="Black">
+
+    <StackLayout>
+        <Label Margin="0,20" HorizontalOptions="Center" FontSize="36" Text="Keyboard Control"/>
+
+        <Entry Placeholder="Input text..." Margin="0,20" Text="{Binding Query}" BackgroundColor="White" TextColor="black" WidthRequest="350" HeightRequest="50" HorizontalOptions="CenterAndExpand"/>
+        <Button Margin="10,20" Command="{Binding OnInputQuery}" Text="Input"/>
+
+
+        <Button Margin="10,20" Command="{Binding OnOpenFind}" Text="Open Search"/>
+
+
+
+        <Grid WidthRequest="300" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Margin="10" Text="Up" Grid.Row="0" Grid.Column="1" Command="{Binding OnUpCommand}"/>
+            <Button Margin="10" Text="Down" Grid.Row="2" Grid.Column="1" Command="{Binding OnDownCommand}"/>
+            <Button Margin="10" Text="Left" Grid.Row="1" Grid.Column="0" Command="{Binding OnLeftCommand}"/>
+
+            <Button Margin="10" Text="Delete" Grid.Row="0" Grid.Column="2" Command="{Binding OnDelete}"/>
+            <Button Margin="10" Text="Search" Grid.Row="2" Grid.Column="2" Command="{Binding OnFind}"/>
+
+            <Button Margin="10" Text="Enter" Grid.Row="1" Grid.Column="1" Command="{Binding OnEnterCommand}"/>
+            <Button Margin="10" Text="Right" Grid.Row="1" Grid.Column="2" Command="{Binding OnRightCommand}"/>
+
+        </Grid>
+        <views:MouseView/>
+        <StackLayout >
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
